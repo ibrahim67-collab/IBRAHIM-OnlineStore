@@ -3,84 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Grocery - Fast • Fresh • Affordable</title>
+    <title>Ibrahim Grocery - Fast Fresh Affordable</title>
     <style>
-        :root { --primary: #4CAF50; --dark: #1B5E20; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
-        
+        body { font-family: 'Segoe UI', sans-serif; margin:0; padding:0; }
         header {
-            background: var(--dark);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: #1B5E20; color: white; padding: 15px 0; position: sticky; top:0; z-index:100;
         }
-        
-        nav {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 1rem 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo { font-size: 28px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
-        
-        .cart-icon { font-size: 26px; cursor: pointer; position: relative; }
-        .cart-count {
-            position: absolute; top: -8px; right: -8px; background: #f44336; color: white;
-            font-size: 13px; width: 20px; height: 20px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center;
-        }
-
+        nav { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 28px; font-weight: bold; }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1600x900/?grocery') center/cover;
-            height: 85vh; display: flex; align-items: center; color: white; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1600x800/?grocery,market');
+            height: 70vh; display: flex; align-items: center; color: white; text-align: center;
         }
-        .hero-content { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
-        .tagline { font-size: 1.6rem; margin-bottom: 30px; font-weight: 300; }
-
-        .btn {
-            background: #FFEB3B; color: #333; padding: 16px 40px; font-size: 1.2rem;
-            border: none; border-radius: 50px; cursor: pointer; font-weight: bold;
-        }
-
-        .section { padding: 70px 20px; max-width: 1300px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--dark); }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        
-        .product-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        .product-card:hover { transform: translateY(-10px); }
-        .product-card img { width: 100%; height: 220px; object-fit: cover; }
-        
-        .product-info { padding: 18px; }
-        .price { font-size: 1.4rem; color: var(--primary); font-weight: bold; margin: 8px 0; }
-        .add-btn {
-            width: 100%; margin-top: 12px; background: var(--primary); color: white;
-            border: none; padding: 12px; border-radius: 8px; cursor: pointer;
-        }
+        .hero-content { max-width: 800px; margin: auto; }
+        .hero h1 { font-size: 48px; margin-bottom: 10px; }
+        .tagline { font-size: 24px; margin-bottom: 30px; }
+        .btn { background: #FFEB3B; color: #333; padding: 15px 40px; font-size: 20px; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; }
 
         .ad-banner {
-            background: linear-gradient(90deg, #FF9800, #f44336);
-            color: white; padding: 25px; text-align: center; font-size: 1.5rem; font-weight: bold;
+            background: linear-gradient(90deg, #FF5722, #F44336); color: white; text-align: center; padding: 18px; font-size: 22px; font-weight: bold;
         }
+
+        .section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 40px; color: #1B5E20; }
+
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .product-card {
+            border: 1px solid #ddd; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; }
+        .product-info { padding: 15px; }
+        .price { color: #2E7D32; font-size: 22px; font-weight: bold; }
+        .add-btn { width: 100%; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 8px; margin-top: 10px; cursor: pointer; }
+
+        footer { background: #1B5E20; color: white; text-align: center; padding: 40px 20px; }
     </style>
 </head>
 <body>
@@ -88,111 +44,65 @@
     <header>
         <nav>
             <div class="logo">🛒 IBRAHIM GROCERY</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="cart-icon" onclick="toggleCart()">🛍️ <span class="cart-count" id="cart-count">0</span></div>
+            <div>Fast • Fresh • Affordable</div>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <!-- Big Advertisement -->
+    <div class="ad-banner">
+        🎉 BIG SAVINGS! 25% OFF on all Fruits & Vegetables | Use Code: FRESH25 | Limited Time Offer
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
         <div class="hero-content">
             <h1>Welcome to Ibrahim Grocery</h1>
-            <p class="tagline">Fast • Fresh • Affordable</p>
-            <button class="btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
-                Order Today – Fast Home Delivery
-            </button>
+            <p class="tagline">Fresh Groceries Delivered to Your Doorstep</p>
+            <button class="btn">Shop Now - Same Day Delivery</button>
         </div>
     </section>
 
-    <div class="ad-banner">
-        🎉 Special Offer: 20% OFF on orders above PKR 3000 | Code: IBRAHIM20
+    <!-- More Ads -->
+    <div class="ad-banner" style="background: linear-gradient(90deg, #4CAF50, #2E7D32);">
+        🚚 FREE Delivery on orders above PKR 2000 | Order Before 11 AM - Get it Today!
     </div>
 
-    <section id="shop" class="section">
-        <h2 class="section-title">Our Products</h2>
-        <div class="products-grid" id="products-container"></div>
+    <!-- Products -->
+    <section class="section">
+        <h2 class="section-title">Today's Best Deals</h2>
+        <div class="products" id="products"></div>
     </section>
 
-    <!-- Delivery Truck Images (from previous) -->
-    <section class="section" style="background:#f1f8e9; text-align:center;">
-        <h2 class="section-title">Fast Delivery You Can Trust</h2>
-        <img src="https://source.unsplash.com/random/900x500/?delivery-truck" alt="Delivery Truck" style="width:100%; max-width:900px; border-radius:12px;">
-    </section>
-
-    <section id="about" class="section">
-        <h2 class="section-title">About Ibrahim Grocery</h2>
-        <p style="max-width:800px; margin:0 auto; text-align:center; font-size:1.2rem;">
-            Family-owned business delivering fresh groceries to your doorstep since 2015.<br>
-            <strong>Fast • Fresh • Affordable</strong>
-        </p>
-    </section>
+    <footer>
+        <p><strong>Ibrahim Grocery</strong> - Serving Fresh Since 2015</p>
+        <p>📍 Karachi | 📞 0300-1234567 | 📧 info@ibrahimgrocery.com</p>
+    </footer>
 
     <script>
         const products = [
-            {id:1, name:"Fresh Mangoes (1kg)", price:280, img:"https://source.unsplash.com/random/300x220/?mango"},
-            {id:2, name:"Tomatoes (1kg)", price:120, img:"https://source.unsplash.com/random/300x220/?tomato"},
-            {id:3, name:"Bananas (1 Dozen)", price:150, img:"https://source.unsplash.com/random/300x220/?banana"},
-            {id:4, name:"Fresh Spinach (1kg)", price:90, img:"https://source.unsplash.com/random/300x220/?spinach"},
-            {id:5, name:"Full Cream Milk (1L)", price:180, img:"https://source.unsplash.com/random/300x220/?milk"},
-            {id:6, name:"Eggs (Dozen)", price:220, img:"https://source.unsplash.com/random/300x220/?eggs"},
-            {id:7, name:"Chicken Breast (1kg)", price:480, img:"https://source.unsplash.com/random/300x220/?chicken"},
-            {id:8, name:"Basmati Rice (5kg)", price:850, img:"https://source.unsplash.com/random/300x220/?rice"},
-            {id:9, name:"Cooking Oil (1L)", price:320, img:"https://source.unsplash.com/random/300x220/?oil"},
-            {id:10, name:"Potato Chips Family Pack", price:180, img:"https://source.unsplash.com/random/300x220/?chips"},
-            {id:11, name:"Coca Cola (1.5L)", price:120, img:"https://source.unsplash.com/random/300x220/?cola"},
-            {id:12, name:"Orange Juice (1L)", price:190, img:"https://source.unsplash.com/random/300x220/?juice"},
-            {id:13, name:"White Bread (Pack)", price:80, img:"https://source.unsplash.com/random/300x220/?bread"},
-            {id:14, name:"Butter (200g)", price:250, img:"https://source.unsplash.com/random/300x220/?butter"},
-            {id:15, name:"Yogurt (1kg)", price:160, img:"https://source.unsplash.com/random/300x220/?yogurt"},
-            {id:16, name:"Onions (1kg)", price:110, img:"https://source.unsplash.com/random/300x220/?onion"},
-            {id:17, name:"Apples (1kg)", price:220, img:"https://source.unsplash.com/random/300x220/?apple"},
-            {id:18, name:"Detergent Powder (1kg)", price:290, img:"https://source.unsplash.com/random/300x220/?detergent"}
+            {name: "Fresh Mangoes (1kg)", price: 249, oldPrice: 320},
+            {name: "Chicken Breast (1kg)", price: 449, oldPrice: 520},
+            {name: "Basmati Rice (5kg)", price: 799, oldPrice: 950},
+            {name: "Full Cream Milk (1L)", price: 170, oldPrice: 190},
+            {name: "Eggs (Dozen)", price: 199, oldPrice: 240},
+            {name: "Coca Cola (1.5L)", price: 110, oldPrice: 130}
         ];
 
-        let cart = [];
-
-        function renderProducts() {
-            const container = document.getElementById('products-container');
-            container.innerHTML = '';
-            
-            products.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <img src="${product.img}" alt="${product.name}">
-                    <div class="product-info">
-                        <h4>${product.name}</h4>
-                        <div class="price">PKR ${product.price}</div>
-                        <button class="add-btn" onclick="addToCart(${product.id})">Add to Cart</button>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function addToCart(id) {
-            const product = products.find(p => p.id === id);
-            const existing = cart.find(item => item.id === id);
-            
-            if (existing) {
-                existing.quantity += 1;
-            } else {
-                cart.push({...product, quantity: 1});
-            }
-            
-            document.getElementById('cart-count').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-            alert(`${product.name} added to cart!`);
-        }
-
-        function toggleCart() {
-            alert("Cart feature coming soon! (Total items: " + cart.length + ")");
-        }
-
-        window.onload = renderProducts;
+        const container = document.getElementById('products');
+        products.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'product-card';
+            div.innerHTML = `
+                <img src="https://source.unsplash.com/random/300x200/?${p.name.split(' ')[0]}" alt="${p.name}">
+                <div class="product-info">
+                    <h3>${p.name}</h3>
+                    <p style="text-decoration: line-through; color: gray;">PKR ${p.oldPrice}</p>
+                    <p class="price">PKR ${p.price} <span style="color: red; font-size:14px;">- SAVE ${Math.round((p.oldPrice-p.price)/p.oldPrice*100)}%</span></p>
+                    <button class="add-btn" onclick="alert('${p.name} added to cart!')">Add to Cart</button>
+                </div>
+            `;
+            container.appendChild(div);
+        });
     </script>
 </body>
 </html>
